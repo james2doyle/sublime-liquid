@@ -1,0 +1,79 @@
+%YAML 1.2
+---
+# http://www.sublimetext.com/docs/3/syntax.html
+name: Liquid Object
+scope: meta.object.liquid
+hidden: true
+
+contexts:
+  main:
+    - include: vars
+    - include: strings
+    - include: pipe
+    - include: compare
+    - include: spread
+    - include: ternary
+    - include: constants
+    - include: named
+
+  vars:
+    - match: '(?:true|false|blank)[a-z]+'
+      scope: variable.other.liquid
+    - match: '[0-9]+'
+      scope: constant.numeric.liquid
+    - match: '\.'
+      scope: punctuation.separator.liquid
+
+  pipe:
+    - match: '\s?(\|)\s?([a-z_-]+)'
+      captures:
+        1: keyword.operator.logical.pipe.liquid
+        2: support.function.filter.liquid
+
+  compare:
+    - match: '\s(contains)\s'
+      captures:
+        1: keyword.operator.logical.compare.liquid
+
+  spread:
+    - match: '(\.\.)'
+      captures:
+        1: keyword.operator.logical.spread.liquid
+
+  # there are issue here still...
+  ternary:
+    - match: '(\?).*(:)'
+      captures:
+        1: keyword.operator.logical.ternary.liquid
+        2: keyword.operator.logical.ternary.liquid
+
+  constants:
+    - match: '(true|false|blank)'
+      captures:
+        1: constant.language.liquid
+
+  named:
+    - match: '(:)'
+      captures:
+        1: keyword.operator.assignment.liquid
+
+  strings:
+    - match: "'"
+      scope: punctuation.definition.string.begin.liquid
+      push:
+        - meta_scope: string.quoted.single.liquid
+        - match: "(')|(\n)"
+          captures:
+            1: punctuation.definition.string.end.liquid
+            2: invalid.illegal.newline.liquid
+          pop: true
+
+    - match: '"'
+      scope: punctuation.definition.string.begin.liquid
+      push:
+        - meta_scope: string.quoted.double.liquid
+        - match: '(")|(\n)'
+          captures:
+            1: punctuation.definition.string.end.liquid
+            2: invalid.illegal.newline.liquid
+          pop: true

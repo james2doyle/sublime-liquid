@@ -1,0 +1,51 @@
+%YAML 1.2
+---
+# http://www.sublimetext.com/docs/3/syntax.html
+name: Liquid Meta
+scope: meta.tag.liquid
+hidden: true
+
+contexts:
+  main:
+    - match: '\b(if|else|elsif|endif|for|endfor|unless|endunless|case|endcase|when|break|continue|cycle|tablerow|endtablerow|form|endform|capture|endcapture|paginate|endpaginate|raw|endraw|style|endstyle|javascript|endjavascript|stylesheet|endstylesheet|schema|endschema)\b'
+      scope: keyword.control.flow.liquid
+    - match: '(assign|layout|render|section|increment|decrement)'
+      scope: support.function.liquid
+    - match: '(==|!=|<|>|>=|<=)'
+      scope: keyword.operator.logical.liquid
+    - match: '(\.\.|\+|-|~|\*|\/|\/\/|%)'
+      scope: keyword.operator.logical.liquid
+    - match: '\b(and|or|not|contains|reversed|in)\b'
+      scope: keyword.operator.liquid
+    - match: '\b(with|for)\b'
+      scope: keyword.control.liquid
+    - match: '='
+      scope: keyword.operator.assignment.liquid
+    - match: '(true|false|blank)'
+      scope: constant.language.liquid
+    - match: '[a-z\-]+'
+      scope: variable.other.liquid
+    - match: '[0-9]+'
+      scope: constant.numeric.liquid
+    - match: '\.'
+      scope: punctuation.separator.liquid
+    - match: '\s?(\|)\s?'
+      scope: keyword.operator.logical.pipe.liquid
+    - match: "'"
+      scope: punctuation.definition.string.begin.liquid
+      push:
+        - meta_scope: string.quoted.single.liquid
+        - match: "(')|(\n)"
+          captures:
+            1: punctuation.definition.string.end.liquid
+            2: invalid.illegal.newline.liquid
+          pop: true
+    - match: '"'
+      scope: punctuation.definition.string.begin.liquid
+      push:
+        - meta_scope: string.quoted.double.liquid
+        - match: '(")|(\n)'
+          captures:
+            1: punctuation.definition.string.end.liquid
+            2: invalid.illegal.newline.liquid
+          pop: true

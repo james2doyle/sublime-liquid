@@ -1,0 +1,65 @@
+%YAML 1.2
+---
+# http://www.sublimetext.com/docs/3/syntax.html
+name: Liquid
+file_extensions:
+  - liquid
+scope: source.liquid
+
+contexts:
+  main:
+    - match: ''
+      push: scope:text.html.basic
+      with_prototype:
+
+        - match: '{% comment %}'
+          scope: punctuation.definition.comment.begin.liquid
+          push:
+            - meta_scope: comment.block.liquid
+            - match: '{% endcomment %}'
+              captures:
+                1: punctuation.definition.comment.end.liquid
+                2: invalid.illegal.newline.liquid
+              pop: true
+
+        - match: '{{-?'
+          scope: punctuation.definition.object.begin.liquid
+          embed: scope:meta.object.liquid
+          escape: '-?}}'
+          escape_captures:
+            0: punctuation.definition.object.end.liquid
+
+        - match: '(?!.*javascript)(?!.*stylesheet)(?!.*schema)(?!.*raw){%-?\s?'
+          scope: punctuation.definition.tag.begin.liquid
+          embed: scope:meta.tag.liquid
+          escape: '-?%}'
+          escape_captures:
+            0: punctuation.definition.tag.end.liquid
+
+        - match: '{% javascript %}'
+          scope: punctuation.definition.tag.javascript.begin.liquid
+          embed: scope:source.js
+          escape: '{% endjavascript %}'
+          escape_captures:
+            0: punctuation.definition.tag.javascript.end.liquid
+
+        - match: '{% stylesheet %}'
+          scope: punctuation.definition.tag.stylesheet.begin.liquid
+          embed: scope:source.scss
+          escape: '{% endstylesheet %}'
+          escape_captures:
+            0: punctuation.definition.tag.stylesheet.end.liquid
+
+        - match: '{% schema %}'
+          scope: punctuation.definition.tag.schema.begin.liquid
+          embed: scope:source.json
+          escape: '{% endschema %}'
+          escape_captures:
+            0: punctuation.definition.tag.schema.end.liquid
+
+        - match: '{% raw %}'
+          scope: punctuation.definition.tag.raw.begin.liquid
+          embed: scope:source.txt
+          escape: '{% endraw %}'
+          escape_captures:
+            0: punctuation.definition.tag.raw.end.liquid

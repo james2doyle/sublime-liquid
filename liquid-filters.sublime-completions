@@ -1,0 +1,450 @@
+{
+  "scope": "source.liquid text.html.basic meta.object.liquid",
+
+  "completions": [
+    {
+      "trigger": "join\tLiquid join",
+      "contents": "join: ${1:', '}${0}"
+    },
+    {
+      "trigger": "concat\tLiquid concat",
+      "contents": "concat: ${1:variable}${0}"
+    },
+    {
+      "trigger": "first\tLiquid first",
+      "contents": "first${0}"
+    },
+    {
+      "trigger": "last\tLiquid last",
+      "contents": "last${0}"
+    },
+    {
+      "trigger": "map\tLiquid map",
+      "contents": "map: '${1:value}'${0}"
+    },
+    {
+      "trigger": "reverse\tLiquid reverse",
+      "contents": "reverse${0}"
+    },
+    {
+      "trigger": "reverse_string\tLiquid reverse_string",
+      "contents": "split: '' | reverse | join: ''${0}"
+    },
+    {
+      "trigger": "size\tLiquid size",
+      "contents": "size${0}"
+    },
+    {
+      "trigger": "sort\tLiquid sort",
+      "contents": "sort: '${1:value}'${0}"
+    },
+    {
+      "trigger": "split\tLiquid split",
+      "contents": "split: '${1:value}'${0}"
+    },
+    {
+      "trigger": "uniq\tLiquid uniq",
+      "contents": "uniq${0}"
+    },
+    {
+      "trigger": "where\tLiquid where",
+      "contents": "where: '${1:field}'${2:, ${3:'value'}} ${0}"
+    },
+    {
+      "trigger": "color_to_rgb\tShopify color_to_rgb",
+      "contents": "color_to_rgb${0}"
+    },
+    {
+      "trigger": "color_to_hsl\tShopify color_to_hsl",
+      "contents": "color_to_hsl${0}"
+    },
+    {
+      "trigger": "color_to_hex\tShopify color_to_hex",
+      "contents": "color_to_hex${0}"
+    },
+    {
+      "trigger": "color_extract\tShopify color_extract",
+      "contents": "color_extract: '${1:red}'${0}"
+    },
+    {
+      "trigger": "color_brightness\tShopify color_brightness",
+      "contents": "color_brightness${0}"
+    },
+    {
+      "trigger": "color_modify\tShopify color_modify",
+      "contents": "color_modify: '${1:red}', ${2:255}${0}"
+    },
+    {
+      "trigger": "color_lighten\tShopify color_lighten",
+      "contents": "color_lighten: ${1:30}${0}"
+    },
+    {
+      "trigger": "color_darken\tShopify color_darken",
+      "contents": "color_darken: ${1:30}${0}"
+    },
+    {
+      "trigger": "color_saturate\tShopify color_saturate",
+      "contents": "color_saturate: ${1:30}${0}"
+    },
+    {
+      "trigger": "color_desaturate\tShopify color_desaturate",
+      "contents": "color_desaturate: ${1:30}${0}"
+    },
+    {
+      "trigger": "color_mix\tShopify color_mix",
+      "contents": "color_mix: '${1:red}', ${2:50}${0}"
+    },
+    {
+      "trigger": "color_contrast\tShopify color_contrast",
+      "contents": "color_contrast: '${1:#ff0033}'${0}"
+    },
+    {
+      "trigger": "color_difference\tShopify color_difference",
+      "contents": "color_difference: '${1:#ff0033}'${0}"
+    },
+    {
+      "trigger": "brightness_difference\tShopify brightness_difference",
+      "contents": "brightness_difference: '${1:#ff0033}'${0}"
+    },
+    {
+      "trigger": "font_modify\tShopify font_modify",
+      "contents": "font_modify: '${1:weight}', '${2:bold}'${0}"
+    },
+    {
+      "trigger": "font_face\tShopify font_face",
+      "contents": "font_face${1:: font_display: '${2:swap}'}${0}"
+    },
+    {
+      "trigger": "font_url\tShopify font_url",
+      "contents": "font_url${1:: '${2:woff}'}${0}"
+    },
+    {
+      "trigger": "img_tag\tShopify img_tag",
+      "contents": "img_tag${1:: '${2:alternate text}', '${3:css-class}', '${4:large}'}${0}"
+    },
+    {
+      "trigger": "currency_selector\tShopify currency_selector",
+      "contents": "currency_selector${1:: class: '${2:my_special_class}', id: '${3:Submit}'}${0}"
+    },
+    {
+      "trigger": "payment_button\tShopify payment_button",
+      "contents": "payment_button${0}"
+    },
+    {
+      "trigger": "script_tag\tLiquid script_tag",
+      "contents": "script_tag${0}"
+    },
+    {
+      "trigger": "stylesheet_tag\tLiquid stylesheet_tag",
+      "contents": "stylesheet_tag${0}"
+    },
+    {
+      "trigger": "time_tag\tLiquid time_tag",
+      "contents": "time_tag${1:: format: '${2:date}'}${0}"
+    },
+    {
+      "trigger": "payment_type_svg_tag\tShopify payment_type_svg_tag",
+      "contents": "payment_type_svg_tag${1:: class: '${2:custom-class}'}${0}"
+    },
+    {
+      "trigger": "abs\tLiquid abs",
+      "contents": "abs${0}"
+    },
+    {
+      "trigger": "at_most\tLiquid at_most",
+      "contents": "at_most: ${1:99}${0}"
+    },
+    {
+      "trigger": "at_least\tLiquid at_least",
+      "contents": "at_least: ${1:99}${0}"
+    },
+    {
+      "trigger": "ceil\tLiquid ceil",
+      "contents": "ceil${0}"
+    },
+    {
+      "trigger": "divided_by\tLiquid divided_by",
+      "contents": "divided_by: ${1:99}${0}"
+    },
+    {
+      "trigger": "floor\tLiquid floor",
+      "contents": "floor${0}"
+    },
+    {
+      "trigger": "minus\tLiquid minus",
+      "contents": "minus: ${1:99}${0}"
+    },
+    {
+      "trigger": "plus\tLiquid plus",
+      "contents": "plus: ${1:99}${0}"
+    },
+    {
+      "trigger": "round\tLiquid round",
+      "contents": "round${1:: '${2:2}'}${0}"
+    },
+    {
+      "trigger": "times\tLiquid times",
+      "contents": "times: ${1:99}${0}"
+    },
+    {
+      "trigger": "modulo\tLiquid modulo",
+      "contents": "modulo: ${1:99}${0}"
+    },
+    {
+      "trigger": "money\tShopify money",
+      "contents": "money${0}"
+    },
+    {
+      "trigger": "money_with_currency\tShopify money_with_currency",
+      "contents": "money_with_currency${0}"
+    },
+    {
+      "trigger": "money_without_trailing_zeros\tShopify money_without_trailing_zeros",
+      "contents": "money_without_trailing_zeros${0}"
+    },
+    {
+      "trigger": "money_without_currency\tShopify money_without_currency",
+      "contents": "money_without_currency${0}"
+    },
+    {
+      "trigger": "append\tLiquid append",
+      "contents": "append: '${1:.jpg}'${0}"
+    },
+    {
+      "trigger": "camelcase\tLiquid camelcase",
+      "contents": "camelcase${0}"
+    },
+    {
+      "trigger": "capitalize\tLiquid capitalize",
+      "contents": "capitalize${0}"
+    },
+    {
+      "trigger": "downcase\tLiquid downcase",
+      "contents": "downcase${0}"
+    },
+    {
+      "trigger": "escape\tLiquid escape",
+      "contents": "escape${0}"
+    },
+    {
+      "trigger": "handle\tShopify handle\\handlesize",
+      "contents": "handleize${0}"
+    },
+    {
+      "trigger": "handleize\tShopify handle\\handlesize",
+      "contents": "handleize${0}"
+    },
+    {
+      "trigger": "md5\tShopify md5",
+      "contents": "md5${0}"
+    },
+    {
+      "trigger": "sha1\tShopify sha1",
+      "contents": "sha1${0}"
+    },
+    {
+      "trigger": "sha256\tShopify sha256",
+      "contents": "sha256${0}"
+    },
+    {
+      "trigger": "hmac_sha1\tShopify hmac_sha1",
+      "contents": "hmac_sha1: '${1:secret key}'${0}"
+    },
+    {
+      "trigger": "hmac_sha256\tShopify hmac_sha256",
+      "contents": "hmac_sha256: '${1:secret key}'${0}"
+    },
+    {
+      "trigger": "newline_to_br\tLiquid newline_to_br",
+      "contents": "newline_to_br${0}"
+    },
+    {
+      "trigger": "pluralize\tLiquid pluralize",
+      "contents": "pluralize: '${1:item}', '${1:items}'${0}"
+    },
+    {
+      "trigger": "prepend\tLiquid prepend",
+      "contents": "prepend: '${1:Mr. }'${0}"
+    },
+    {
+      "trigger": "remove\tLiquid remove",
+      "contents": "remove: '${1:word}'${0}"
+    },
+    {
+      "trigger": "remove_first\tLiquid remove_first",
+      "contents": "remove_first: '${1:word}'${0}"
+    },
+    {
+      "trigger": "replace\tLiquid replace",
+      "contents": "replace: '${1:Awesome}', '${2:Mega}'${0}"
+    },
+    {
+      "trigger": "replace_first\tLiquid replace_first",
+      "contents": "replace_first: '${1:Awesome}', '${2:Mega}'${0}"
+    },
+    {
+      "trigger": "slice\tLiquid slice",
+      "contents": "slice: ${1:1}${2:, ${3:3}}${0}"
+    },
+    {
+      "trigger": "strip\tLiquid strip",
+      "contents": "strip${0}"
+    },
+    {
+      "trigger": "lstrip\tLiquid lstrip",
+      "contents": "lstrip${0}"
+    },
+    {
+      "trigger": "rstrip\tLiquid rstrip",
+      "contents": "rstrip${0}"
+    },
+    {
+      "trigger": "strip_html\tLiquid strip_html",
+      "contents": "strip_html${0}"
+    },
+    {
+      "trigger": "strip_newlines\tLiquid strip_newlines",
+      "contents": "strip_newlines${0}"
+    },
+    {
+      "trigger": "truncate\tLiquid truncate",
+      "contents": "truncate: ${1:99}${2:, '${3: and so on}'}${0}"
+    },
+    {
+      "trigger": "truncatewords\tLiquid truncatewords",
+      "contents": "truncatewords: ${1:99}${2:, '${3:--}'}${0}"
+    },
+    {
+      "trigger": "upcase\tLiquid upcase",
+      "contents": "upcase${0}"
+    },
+    {
+      "trigger": "url_encode\tLiquid url_encode",
+      "contents": "url_encode${0}"
+    },
+    {
+      "trigger": "url_escape\tLiquid url_escape",
+      "contents": "url_escape${0}"
+    },
+    {
+      "trigger": "url_param_escape\tLiquid url_param_escape",
+      "contents": "url_param_escape${0}"
+    },
+    {
+      "trigger": "asset_url\tShopify asset_url",
+      "contents": "asset_url${0}"
+    },
+    {
+      "trigger": "asset_img_url\tShopify asset_img_url",
+      "contents": "asset_img_url: '${1:300x}'${0}"
+    },
+    {
+      "trigger": "file_url\tShopify file_url",
+      "contents": "file_url${0}"
+    },
+    {
+      "trigger": "file_img_url\tShopify file_img_url",
+      "contents": "file_img_url: '${1:1024x768}'${0}"
+    },
+    {
+      "trigger": "customer_login_link\tShopify customer_login_link",
+      "contents": "customer_login_link${0}"
+    },
+    {
+      "trigger": "global_asset_url\tShopify global_asset_url",
+      "contents": "global_asset_url${0}"
+    },
+    {
+      "trigger": "img_url\tShopify img_url",
+      "contents": "img_url: '${1:1024x768}'${2:, ${3:scale: ${4:2},} ${5:format: '${6:pjpg}',} ${7:crop: '${8:bottom}'}}${0}"
+    },
+    {
+      "trigger": "link_to\tShopify link_to",
+      "contents": "link_to: '${1:https://www.shopify.com}', '${2:A link to Shopify}'${0}"
+    },
+    {
+      "trigger": "link_to_vendor\tShopify link_to_vendor",
+      "contents": "link_to_vendor${0}"
+    },
+    {
+      "trigger": "link_to_type\tShopify link_to_type",
+      "contents": "link_to_type${0}"
+    },
+    {
+      "trigger": "link_to_tag\tShopify link_to_tag",
+      "contents": "link_to_tag: ${1:tag}${0}"
+    },
+    {
+      "trigger": "link_to_add_tag\tShopify link_to_add_tag",
+      "contents": "link_to_add_tag: ${1:tag}${0}"
+    },
+    {
+      "trigger": "link_to_remove_tag\tShopify link_to_remove_tag",
+      "contents": "link_to_remove_tag: ${1:tag}${0}"
+    },
+    {
+      "trigger": "payment_type_img_url\tShopify payment_type_img_url",
+      "contents": "payment_type_img_url${0}"
+    },
+    {
+      "trigger": "shopify_asset_url\tShopify shopify_asset_url",
+      "contents": "shopify_asset_url${0}"
+    },
+    {
+      "trigger": "sort_by\tLiquid sort_by",
+      "contents": "sort_by: '${1:best-selling}'${0}"
+    },
+    {
+      "trigger": "url_for_type\tShopify url_for_type",
+      "contents": "url_for_type${0}"
+    },
+    {
+      "trigger": "url_for_vendor\tShopify url_for_vendor",
+      "contents": "url_for_vendor${0}"
+    },
+    {
+      "trigger": "within\tLiquid within",
+      "contents": "within: ${1:collection}${0}"
+    },
+    {
+      "trigger": "date\tLiquid date",
+      "contents": "date: '${1:%a, %b %d, %y}'${0}"
+    },
+    {
+      "trigger": "default\tLiquid default",
+      "contents": "default: '${1:default}'${2:, allow_false: ${3:false}}${0}"
+    },
+    {
+      "trigger": "default_errors\tShopify default_errors",
+      "contents": "default_errors${0}"
+    },
+    {
+      "trigger": "default_pagination\tShopify default_pagination",
+      "contents": "default_pagination${1:: next: '${2:Older}'${3:, previous: '${4:Newer}'}}${0}"
+    },
+    {
+      "trigger": "format_address\tShopify format_address",
+      "contents": "format_address${0}"
+    },
+    {
+      "trigger": "highlight\tShopify highlight",
+      "contents": "highlight: ${1:search.terms}${0}"
+    },
+    {
+      "trigger": "highlight_active_tag\tShopify highlight_active_tag",
+      "contents": "highlight_active_tag${0}"
+    },
+    {
+      "trigger": "json\tLiquid json",
+      "contents": "json${0}"
+    },
+    {
+      "trigger": "weight_with_unit\tShopify weight_with_unit",
+      "contents": "weight_with_unit${1:: ${2:variant.weight_unit}}${0}"
+    },
+    {
+      "trigger": "placeholder_svg_tag\tShopify placeholder_svg_tag",
+      "contents": "placeholder_svg_tag${1:: '${2:custom}'}${0}"
+    }
+  ]
+}
