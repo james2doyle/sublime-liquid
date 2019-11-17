@@ -47,6 +47,10 @@
       "contents": "{% raw %}\n\t${1:content}\n{% endraw %}${0}"
     },
     {
+      "trigger": "layout\tShopify layout",
+      "contents": "{% layout '${1:name}' %}${0}"
+    },
+    {
       "trigger": "section\tShopify section",
       "contents": "{% section '${1:name}' %}${0}"
     },
