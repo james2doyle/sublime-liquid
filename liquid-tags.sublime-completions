@@ -7,8 +7,20 @@
       "contents": "{% for ${1:item} in ${2:items} %}\n\t{{ ${1:item} }}\n{% endfor %}${0}"
     },
     {
+      "trigger": "endfor\tLiquid endfor",
+      "contents": "{% endfor %}${0}"
+    },
+    {
       "trigger": "if\tLiquid if",
       "contents": "{% if ${1:true} %}\n\t${2:content}\n{% endif %}${0}"
+    },
+    {
+      "trigger": "else\tLiquid else",
+      "contents": "{% else %}${0}"
+    },
+    {
+      "trigger": "endif\tLiquid endif",
+      "contents": "{% endif %}${0}"
     },
     {
       "trigger": "unless\tLiquid unless",
