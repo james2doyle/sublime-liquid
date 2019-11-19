@@ -12,11 +12,11 @@ contexts:
       push: scope:text.html.basic
       with_prototype:
 
-        - match: '{% comment %}'
+        - match: '{%\s?comment\s?%}'
           scope: punctuation.definition.comment.begin.liquid
           push:
             - meta_scope: comment.block.liquid
-            - match: '{% endcomment %}'
+            - match: '{%\s?endcomment\s?%}'
               captures:
                 1: punctuation.definition.comment.end.liquid
                 2: invalid.illegal.newline.liquid
@@ -36,30 +36,30 @@ contexts:
           escape_captures:
             0: punctuation.definition.tag.end.liquid
 
-        - match: '{% javascript %}'
+        - match: '{%\s?javascript.*\s?%}'
           scope: punctuation.definition.tag.javascript.begin.liquid
           embed: scope:source.js
-          escape: '{% endjavascript %}'
+          escape: '{%\s?endjavascript\s?%}'
           escape_captures:
             0: punctuation.definition.tag.javascript.end.liquid
 
-        - match: '{% stylesheet %}'
+        - match: '{%\s?stylesheet.*\s?%}'
           scope: punctuation.definition.tag.stylesheet.begin.liquid
           embed: scope:source.scss
-          escape: '{% endstylesheet %}'
+          escape: '{%\s?endstylesheet\s?%}'
           escape_captures:
             0: punctuation.definition.tag.stylesheet.end.liquid
 
-        - match: '{% schema %}'
+        - match: '{%\s?schema.*\s?%}'
           scope: punctuation.definition.tag.schema.begin.liquid
           embed: scope:source.json
-          escape: '{% endschema %}'
+          escape: '{%\s?endschema\s?%}'
           escape_captures:
             0: punctuation.definition.tag.schema.end.liquid
 
-        - match: '{% raw %}'
+        - match: '{%\s?raw\s?%}'
           scope: punctuation.definition.tag.raw.begin.liquid
           embed: scope:source.txt
-          escape: '{% endraw %}'
+          escape: '{%\s?endraw\s?%}'
           escape_captures:
             0: punctuation.definition.tag.raw.end.liquid
