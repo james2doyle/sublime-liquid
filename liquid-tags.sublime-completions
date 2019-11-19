@@ -79,6 +79,10 @@
       "contents": "{% decrement ${1:counter} %}${0}"
     },
     {
+      "trigger": "include\tShopify include",
+      "contents": "{% include '${1:name}'${2:, ${3:variable}: ${4:value}} %}${0}"
+    },
+    {
       "trigger": "render\tShopify render",
       "contents": "{% render '${1:name}'${2:, ${3:variable}: ${4:value}} %}${0}"
     },
