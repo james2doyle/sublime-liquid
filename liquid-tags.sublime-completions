@@ -67,6 +67,10 @@
       "contents": "{% layout '${1:name}' %}${0}"
     },
     {
+      "trigger": "liquid\tShopify liquid",
+      "contents": "{% liquid\n\t${1:echo 'sup?'} %}${0}"
+    },
+    {
       "trigger": "section\tShopify section",
       "contents": "{% section '${1:name}' %}${0}"
     },
