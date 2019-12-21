@@ -36,21 +36,21 @@ contexts:
           escape_captures:
             0: punctuation.definition.tag.end.liquid
 
-        - match: '{%\s?javascript.*\s?%}'
+        - match: '{%\s?javascript\s?%}'
           scope: punctuation.definition.tag.javascript.begin.liquid
           embed: scope:source.js
           escape: '{%\s?endjavascript\s?%}'
           escape_captures:
             0: punctuation.definition.tag.javascript.end.liquid
 
-        - match: '{%\s?stylesheet.*\s?%}'
+        - match: '{%\s?stylesheet\s?%}'
           scope: punctuation.definition.tag.stylesheet.begin.liquid
           embed: scope:source.scss
           escape: '{%\s?endstylesheet\s?%}'
           escape_captures:
             0: punctuation.definition.tag.stylesheet.end.liquid
 
-        - match: '{%\s?schema.*\s?%}'
+        - match: '{%\s?schema\s?%}'
           scope: punctuation.definition.tag.schema.begin.liquid
           embed: scope:source.json
           escape: '{%\s?endschema\s?%}'
