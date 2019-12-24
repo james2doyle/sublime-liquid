@@ -43,7 +43,7 @@ contexts:
           escape_captures:
             0: punctuation.definition.tag.javascript.end.liquid
 
-        - match: '{%\s?stylesheet\s?%}'
+        - match: '{%\s?stylesheet\s?.*?%}'
           scope: punctuation.definition.tag.stylesheet.begin.liquid
           embed: scope:source.scss
           escape: '{%\s?endstylesheet\s?%}'
