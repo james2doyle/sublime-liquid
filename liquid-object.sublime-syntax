@@ -8,6 +8,7 @@ hidden: true
 contexts:
   main:
     - include: vars
+    - include: forloop
     - include: strings
     - include: pipe
     - include: spread
@@ -19,6 +20,8 @@ contexts:
       scope: variable.other.liquid
     - match: '[0-9]+'
       scope: constant.numeric.liquid
+    - match: 'forloop\.(first|index|index0|last|length|rindex|rindex0)+'
+      scope: support.function.forloop.liquid
     - match: '\.'
       scope: punctuation.separator.liquid
 

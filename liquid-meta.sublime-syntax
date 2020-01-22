@@ -24,13 +24,15 @@ contexts:
       scope: keyword.operator.logical.liquid
     - match: '\b(and|or|not|contains|reversed|in)\b\s'
       scope: keyword.operator.liquid
+    - match: 'forloop\.(first|index|index0|last|length|rindex|rindex0)+'
+      scope: support.function.forloop.liquid
     - match: '\b(with|for|as)\b'
       scope: keyword.control.liquid
     - match: '='
       scope: keyword.operator.assignment.liquid
     - match: '(true|false|blank|nil)'
       scope: constant.language.liquid
-    - match: '[a-z\-]+'
+    - match: '(?:forloop)[a-z\-]+'
       scope: variable.other.liquid
     - match: '[0-9]+'
       scope: constant.numeric.liquid
