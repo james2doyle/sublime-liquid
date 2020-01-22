@@ -22,7 +22,7 @@ contexts:
       scope: keyword.operator.logical.liquid
     - match: '(\.\.|\+|-|~|\*|\/|\/\/|%)'
       scope: keyword.operator.logical.liquid
-    - match: '\b(and|or|not|contains|reversed|in)\b'
+    - match: '\b(and|or|not|contains|reversed|in)\b\s'
       scope: keyword.operator.liquid
     - match: '\b(with|for|as)\b'
       scope: keyword.control.liquid

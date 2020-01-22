@@ -10,7 +10,6 @@ contexts:
     - include: vars
     - include: strings
     - include: pipe
-    - include: compare
     - include: spread
     - include: ternary
     - include: constants
@@ -29,11 +28,6 @@ contexts:
       captures:
         1: keyword.operator.logical.pipe.liquid
         2: support.function.filter.liquid
-
-  compare:
-    - match: '\s(contains)\s'
-      captures:
-        1: keyword.operator.logical.compare.liquid
 
   spread:
     - match: '(\.\.)'
