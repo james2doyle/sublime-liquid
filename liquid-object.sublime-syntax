@@ -11,7 +11,6 @@ contexts:
     - include: strings
     - include: pipe
     - include: spread
-    - include: ternary
     - include: constants
     - include: named
 
@@ -33,13 +32,6 @@ contexts:
     - match: '(\.\.)'
       captures:
         1: keyword.operator.logical.spread.liquid
-
-  # there are issue here still...
-  ternary:
-    - match: '(\?).*(:)'
-      captures:
-        1: keyword.operator.logical.ternary.liquid
-        2: keyword.operator.logical.ternary.liquid
 
   constants:
     - match: '(true|false|blank|nil)'
