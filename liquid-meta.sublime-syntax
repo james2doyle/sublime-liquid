@@ -28,7 +28,7 @@ contexts:
       scope: keyword.control.liquid
     - match: '='
       scope: keyword.operator.assignment.liquid
-    - match: '(true|false|blank)'
+    - match: '(true|false|blank|nil)'
       scope: constant.language.liquid
     - match: '[a-z\-]+'
       scope: variable.other.liquid

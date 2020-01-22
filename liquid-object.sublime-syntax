@@ -16,7 +16,7 @@ contexts:
     - include: named
 
   vars:
-    - match: '(?:true|false|blank)[a-z]+'
+    - match: '(?:true|false|blank|nil)[a-z]+'
       scope: variable.other.liquid
     - match: '[0-9]+'
       scope: constant.numeric.liquid
@@ -42,7 +42,7 @@ contexts:
         2: keyword.operator.logical.ternary.liquid
 
   constants:
-    - match: '(true|false|blank)'
+    - match: '(true|false|blank|nil)'
       captures:
         1: constant.language.liquid
 
