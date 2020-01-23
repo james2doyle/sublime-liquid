@@ -84,7 +84,7 @@
     },
     {
       "trigger": "style\tShopify style",
-      "contents": "{% style %}\n\t${1:content}\n{% endstyle %}${0}"
+      "contents": "{%- style -%}\n\t${1:content}\n{%- endstyle -%}${0}"
     },
     {
       "trigger": "stylesheet\tShopify stylesheet",
