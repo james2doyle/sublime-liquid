@@ -19,6 +19,38 @@
       "contents": "{%- endif -%}${0}"
     },
     {
+      "trigger": "endfor\tLiquid endfor",
+      "contents": "{%- endfor -%}${0}"
+    },
+    {
+      "trigger": "endunless\tLiquid endunless",
+      "contents": "{%- endunless -%}${0}"
+    },
+    {
+      "trigger": "endcase\tLiquid endcase",
+      "contents": "{%- endcase -%}${0}"
+    },
+    {
+      "trigger": "endcapture\tLiquid endcapture",
+      "contents": "{%- endcapture -%}${0}"
+    },
+    {
+      "trigger": "endraw\tLiquid endraw",
+      "contents": "{%- endraw -%}${0}"
+    },
+    {
+      "trigger": "endtablerow\tLiquid endtablerow",
+      "contents": "{%- endtablerow -%}${0}"
+    },
+    {
+      "trigger": "endpaginate\tLiquid endpaginate",
+      "contents": "{%- endpaginate -%}${0}"
+    },
+    {
+      "trigger": "endform\tLiquid endform",
+      "contents": "{%- endform -%}${0}"
+    },
+    {
       "trigger": "when\tLiquid when",
       "contents": "{%- when '${1:case}' -%}${0}"
     },
