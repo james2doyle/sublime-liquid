@@ -3,6 +3,10 @@
 
   "completions": [
     {
+      "trigger": "echo\tLiquid echo",
+      "contents": "{{- ${1:value} -}}${0}"
+    },
+    {
       "trigger": "for\tLiquid for",
       "contents": "{%- for ${1:item} in ${2:items} -%}\n\t{{ ${1:item} }}\n{%- endfor -%}${0}"
     },
