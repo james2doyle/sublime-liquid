@@ -32,8 +32,10 @@ contexts:
       scope: keyword.operator.assignment.liquid
     - match: '(true|false|blank|nil)'
       scope: constant.language.liquid
-    - match: '(?:forloop)[a-z\-]+'
+    - match: '(?:forloop)[A-z_-]+'
       scope: variable.other.liquid
+    - match: '([A-z_-]+?)(?=\s?\=\s?[^\=])'
+      scope: variable.assignment.liquid
     - match: '[0-9]+'
       scope: constant.numeric.liquid
     - match: '\.'

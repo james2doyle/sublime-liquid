@@ -16,7 +16,7 @@ contexts:
     - include: named
 
   vars:
-    - match: '(?:true|false|blank|nil)[a-z]+'
+    - match: '(?:true|false|blank|nil)[A-z_-]+'
       scope: variable.other.liquid
     - match: '[0-9]+'
       scope: constant.numeric.liquid
@@ -26,7 +26,7 @@ contexts:
       scope: punctuation.separator.liquid
 
   pipe:
-    - match: '\s?(\|)\s?([a-z_-]+)'
+    - match: '\s?(\|)\s?(\w+)'
       captures:
         1: keyword.operator.logical.pipe.liquid
         2: support.function.filter.liquid

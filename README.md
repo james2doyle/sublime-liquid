@@ -33,5 +33,6 @@
 - [x] comments
 - [x] tag completions
 - [x] filter completions
-- [x] javascript, stylesheet, schema, raw highlighting
+- [x] `javascript`, `stylesheet`, `schema`, `raw` highlighting
+- [x] Variable Symbols
 - [ ] publish on Package Control
