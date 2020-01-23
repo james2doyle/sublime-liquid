@@ -4,35 +4,35 @@
   "completions": [
     {
       "trigger": "for\tLiquid for",
-      "contents": "{% for ${1:item} in ${2:items} %}\n\t{{ ${1:item} }}\n{% endfor %}${0}"
-    },
-    {
-      "trigger": "endfor\tLiquid endfor",
-      "contents": "{% endfor %}${0}"
+      "contents": "{%- for ${1:item} in ${2:items} -%}\n\t{{ ${1:item} }}\n{%- endfor -%}${0}"
     },
     {
       "trigger": "if\tLiquid if",
-      "contents": "{% if ${1:true} %}\n\t${2:content}\n{% endif %}${0}"
+      "contents": "{%- if ${1:true} -%}\n\t${2:content}\n{%- endif -%}${0}"
     },
     {
       "trigger": "else\tLiquid else",
-      "contents": "{% else %}${0}"
+      "contents": "{%- else -%}${0}"
     },
     {
       "trigger": "endif\tLiquid endif",
-      "contents": "{% endif %}${0}"
+      "contents": "{%- endif -%}${0}"
+    },
+    {
+      "trigger": "when\tLiquid when",
+      "contents": "{%- when '${1:case}' -%}${0}"
     },
     {
       "trigger": "unless\tLiquid unless",
-      "contents": "{% unless ${1:true} %}\n\t${2:content}\n{% endunless %}${0}"
+      "contents": "{%- unless ${1:true} -%}\n\t${2:content}\n{%- endunless -%}${0}"
     },
     {
       "trigger": "case\tLiquid case",
-      "contents": "{% case ${1:value} %}\n\t{% when ${2:'case1'} %}\n\t\t{{ ${3:value} }}\n\t{% else %}\n\t\t{{ ${4:value} }}\n{% endcase %}${0}"
+      "contents": "{%- case ${1:value} -%}\n\t{%- when ${2:'case1'} -%}\n\t\t{{ ${3:value} }}\n\t{%- else -%}\n\t\t{{ ${4:value} }}\n{%- endcase -%}${0}"
     },
     {
       "trigger": "capture\tLiquid capture",
-      "contents": "{% capture '${1:name}' %}\n\t${2:content}\n{% endcapture %}${0}"
+      "contents": "{%- capture '${1:name}' -%}\n\t${2:content}\n{%- endcapture -%}${0}"
     },
     {
       "trigger": "comment\tLiquid comment",
@@ -56,50 +56,50 @@
     },
     {
       "trigger": "raw\tLiquid raw",
-      "contents": "{% raw %}\n\t${1:content}\n{% endraw %}${0}"
+      "contents": "{%- raw -%}\n\t${1:content}\n{%- endraw -%}${0}"
     },
     {
       "trigger": "assign\tLiquid assign",
-      "contents": "{% assign ${1:name} = ${2:value} %}${0}"
+      "contents": "{%- assign ${1:name} = ${2:value} -%}${0}"
     },
     {
       "trigger": "layout\tShopify layout",
-      "contents": "{% layout '${1:name}' %}${0}"
+      "contents": "{%- layout '${1:name}' -%}${0}"
     },
     {
       "trigger": "liquid\tShopify liquid",
-      "contents": "{% liquid\n\t${1:echo 'sup?'} %}${0}"
+      "contents": "{%- liquid\n\t${1:echo 'sup?'} -%}${0}"
     },
     {
       "trigger": "section\tShopify section",
-      "contents": "{% section '${1:name}' %}${0}"
+      "contents": "{%- section '${1:name}' -%}${0}"
     },
     {
       "trigger": "increment\tLiquid increment",
-      "contents": "{% increment ${1:counter} %}${0}"
+      "contents": "{%- increment ${1:counter} -%}${0}"
     },
     {
       "trigger": "decrement\tLiquid decrement",
-      "contents": "{% decrement ${1:counter} %}${0}"
+      "contents": "{%- decrement ${1:counter} -%}${0}"
     },
     {
       "trigger": "include\tShopify include",
-      "contents": "{% include '${1:name}'${2:, ${3:variable}: ${4:value}} %}${0}"
+      "contents": "{%- include '${1:name}'${2:, ${3:variable}: ${4:value}} -%}${0}"
     },
     {
       "trigger": "render\tShopify render",
-      "contents": "{% render '${1:name}'${2:, ${3:variable}: ${4:value}} %}${0}"
+      "contents": "{%- render '${1:name}'${2:, ${3:variable}: ${4:value}} -%}${0}"
     },
     {
       "trigger": "tablerow\tShopify tablerow",
-      "contents": "{% tablerow ${1:product} in ${2:collection.products} %}\n\t{{ ${3:product.title} }}\n{% endtablerow %}${0}"
+      "contents": "{%- tablerow ${1:product} in ${2:collection.products} -%}\n\t{{ ${3:product.title} }}\n{%- endtablerow -%}${0}"
     },
     {
       "trigger": "paginate\tShopify paginate",
-      "contents": "{% paginate ${1:collection.products} by ${2:5} %}\n\t{% for ${3:product} in ${1:collection.products} %}\n\t\t{{ ${3:product.id} }}\n{% endfor %}\n{% endpaginate %}${0}" },
+      "contents": "{%- paginate ${1:collection.products} by ${2:5} -%}\n\t{%- for ${3:product} in ${1:collection.products} -%}\n\t\t{{ ${3:product.id} }}\n{%- endfor -%}\n{%- endpaginate -%}${0}" },
     {
       "trigger": "form\tShopify form",
-      "contents": "{% form \"${1:name}\", ${2:product,} ${3:id: \"newID\",} ${3:class: \"custom-class\",} ${3:data-example: \"100\"} %}\n\t${4:content}\n{% endform %}${0}"
+      "contents": "{%- form \"${1:name}\", ${2:product,} ${3:id: \"newID\",} ${3:class: \"custom-class\",} ${3:data-example: \"100\"} -%}\n\t${4:content}\n{%- endform -%}${0}"
     }
   ]
 }
