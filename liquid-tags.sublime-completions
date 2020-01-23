@@ -99,6 +99,10 @@
       "contents": "{%- assign ${1:name} = ${2:value} -%}${0}"
     },
     {
+      "trigger": "cycle\tShopify cycle",
+      "contents": "{%- cycle ${1:'${2:group}':} '${3:one}', '${4:two}' -%}${0}"
+    },
+    {
       "trigger": "layout\tShopify layout",
       "contents": "{%- layout '${1:name}' -%}${0}"
     },
