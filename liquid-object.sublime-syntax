@@ -8,6 +8,7 @@ hidden: true
 contexts:
   main:
     - include: vars
+    - include: numbers
     - include: forloop
     - include: strings
     - include: pipe
@@ -16,17 +17,17 @@ contexts:
     - include: named
 
   vars:
-    - match: '(?:true|false|blank|nil)[A-z_-]+'
-      scope: variable.other.liquid
-    - match: '[0-9]+'
-      scope: constant.numeric.liquid
-    - match: 'forloop\.(first|index|index0|last|length|rindex|rindex0)+'
-      scope: support.function.forloop.liquid
-    - match: '\.'
-      scope: punctuation.separator.liquid
+    - match: '(?=[^true|false|blank|nil])([A-z0-9\._-]+)'
+      captures:
+        1: variable.other.liquid
+
+  numbers:
+    - match: '(?:[^\B]?)(\d+)'
+      captures:
+        1: constant.numeric.liquid
 
   pipe:
-    - match: '\s?(\|)\s?(\w+)'
+    - match: '[.\s]?(\|)[.\s]?(\w+)'
       captures:
         1: keyword.operator.logical.pipe.liquid
         2: support.function.filter.liquid

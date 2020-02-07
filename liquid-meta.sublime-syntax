@@ -20,7 +20,7 @@ contexts:
         1: keyword.operator.assignment.liquid
     - match: '(==|!=|<|>|>=|<=)'
       scope: keyword.operator.logical.liquid
-    - match: '(\.\.|\+|-|~|\*|\/|\/\/|%)'
+    - match: '\B(\.\.|\+|-|~|\*|\/|\/\/|%|\\)\B'
       scope: keyword.operator.logical.liquid
     - match: '\b(and|or|not|contains|reversed|in)\b\s'
       scope: keyword.operator.liquid
@@ -32,11 +32,11 @@ contexts:
       scope: keyword.operator.assignment.liquid
     - match: '(true|false|blank|nil)'
       scope: constant.language.liquid
-    - match: '(?:forloop)[A-z_-]+'
+    - match: '(?:forloop)[A-z0-9\._-]+'
       scope: variable.other.liquid
-    - match: '([A-z_-]+?)(?=\s?\=\s?[^\=])'
+    - match: '([A-z0-9\._-]+?)(?=\s?\=\s?[^\=])'
       scope: variable.assignment.liquid
-    - match: '[0-9]+'
+    - match: '\b(\d+)\b'
       scope: constant.numeric.liquid
     - match: '\.'
       scope: punctuation.separator.liquid
