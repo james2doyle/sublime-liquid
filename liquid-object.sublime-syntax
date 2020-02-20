@@ -15,6 +15,7 @@ contexts:
     - include: spread
     - include: constants
     - include: assignment
+    - include: arguments
 
   vars:
     - match: '(?=[^true|false|blank|nil])([A-z0-9\._-]+)'
@@ -46,6 +47,13 @@ contexts:
     - match: '(:)'
       captures:
         1: keyword.operator.assignment.liquid
+
+  arguments:
+    - match: '(?:,\s?)(\w+)([\:]+)(?:\W+?)(\w+)'
+      captures:
+        1: keyword.operator.argument.name.liquid
+        2: keyword.operator.assignment.liquid
+        3: keyword.operator.argument.value.liquid
 
   strings:
     - match: "'"
