@@ -36,7 +36,7 @@ contexts:
       scope: variable.other.liquid
     - match: '([A-z0-9\._-]+?)(?=\s?\=\s?[^\=])'
       scope: variable.assignment.liquid
-    - match: '\b(\d+)\b'
+    - match: '(?:[\:|==|!=|<|>|>=|<=|\s])(\d+)'
       scope: constant.numeric.liquid
     - match: '\.'
       scope: punctuation.separator.liquid

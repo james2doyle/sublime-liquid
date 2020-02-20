@@ -22,7 +22,7 @@ contexts:
         1: variable.other.liquid
 
   numbers:
-    - match: '(?:[^\B]?)(\d+)'
+    - match: '(?:[\:|==|!=|<|>|>=|<=|\s])(\d+)'
       captures:
         1: constant.numeric.liquid
 
