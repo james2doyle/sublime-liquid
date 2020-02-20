@@ -14,7 +14,7 @@ contexts:
     - include: pipe
     - include: spread
     - include: constants
-    - include: named
+    - include: assignment
 
   vars:
     - match: '(?=[^true|false|blank|nil])([A-z0-9\._-]+)'
@@ -42,7 +42,7 @@ contexts:
       captures:
         1: constant.language.liquid
 
-  named:
+  assignment:
     - match: '(:)'
       captures:
         1: keyword.operator.assignment.liquid
