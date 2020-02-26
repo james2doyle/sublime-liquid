@@ -38,6 +38,10 @@ contexts:
       scope: variable.assignment.liquid
     - match: '(?:[\:|==|!=|<|>|>=|<=|\s])(\d+)'
       scope: constant.numeric.liquid
+    - match: '(\d+)\.\.(\d+)'
+      captures:
+        1: constant.numeric.liquid
+        2: constant.numeric.liquid
     - match: '\.'
       scope: punctuation.separator.liquid
     - match: "'"
