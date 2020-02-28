@@ -11,6 +11,10 @@
       "contents": "concat: ${1:variable}${0}"
     },
     {
+      "trigger": "compact\tLiquid compact",
+      "contents": "compact${0}"
+    },
+    {
       "trigger": "first\tLiquid first",
       "contents": "first${0}"
     },
