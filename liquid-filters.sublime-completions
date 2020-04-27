@@ -449,6 +449,26 @@
     {
       "trigger": "placeholder_svg_tag\tShopify placeholder_svg_tag",
       "contents": "placeholder_svg_tag${1:: '${2:custom}'}${0}"
+    },
+    {
+      "trigger": "external_video_tag\tShopify Plus external_video_tag",
+      "contents": "external_video_tag${1:: class: '${2:video-elem}'}${0}"
+    },
+    {
+      "trigger": "external_video_url\tShopify Plus external_video_url",
+      "contents": "external_video_url${1:: color: '${2:white}'}${0}"
+    },
+    {
+      "trigger": "media_tag\tShopify Plus media_tag",
+      "contents": "media_tag${1:: image_size: '${2:1024x}'}${0}"
+    },
+    {
+      "trigger": "model_viewer_tag\tShopify Plus model_viewer_tag",
+      "contents": "model_viewer_tag${1:: background-color: '${2:#455A64}'}${0}"
+    },
+    {
+      "trigger": "video_tag\tShopify Plus video_tag",
+      "contents": "video_tag${1:: image_size: '${2:1024x}'}${0}"
     }
   ]
 }
