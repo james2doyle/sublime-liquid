@@ -1,5 +1,5 @@
 {
-  "scope": "source.liquid text.html.basic meta.object.liquid",
+  "scope": "source.liquid text.html.basic meta.object.liquid, source.liquid text.html.basic meta.tag.liquid",
 
   "completions": [
     {
