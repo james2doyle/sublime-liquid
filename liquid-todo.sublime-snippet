@@ -1,0 +1,13 @@
+<snippet>
+  <content><![CDATA[
+{% comment %}
+  ${1:TODO: ${2:something to do}}
+  ${3:NOTE: ${4:Notes about the todo}}
+{% endcomment %}$0
+]]></content>
+  <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+  <tabTrigger>TODO</tabTrigger>
+  <description>Insert a TODO comment</description>
+  <!-- Optional: Set a scope to limit where the snippet will trigger -->
+  <scope>source.liquid</scope>
+</snippet>
