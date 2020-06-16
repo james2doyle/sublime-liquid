@@ -323,6 +323,10 @@
       "contents": "upcase${0}"
     },
     {
+      "trigger": "url_decode\tLiquid url_decode",
+      "contents": "url_decode${0}"
+    },
+    {
       "trigger": "url_encode\tLiquid url_encode",
       "contents": "url_encode${0}"
     },
