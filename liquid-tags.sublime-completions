@@ -15,6 +15,10 @@
       "contents": "{%- if ${1:true} -%}\n\t${2:content}\n{%- endif -%}${0}"
     },
     {
+      "trigger": "elsif\tLiquid elsif",
+      "contents": "{%- elsif ${1:true} -%}${0}"
+    },
+    {
       "trigger": "else\tLiquid else",
       "contents": "{%- else -%}${0}"
     },
