@@ -44,7 +44,7 @@
     },
     {
       "trigger": "endraw\tLiquid endraw",
-      "contents": "{%- endraw -%}${0}"
+      "contents": "{% endraw %}${0}"
     },
     {
       "trigger": "endtablerow\tLiquid endtablerow",
@@ -96,7 +96,7 @@
     },
     {
       "trigger": "raw\tLiquid raw",
-      "contents": "{%- raw -%}\n\t${1:content}\n{%- endraw -%}${0}"
+      "contents": "{% raw %}\n\t${1:content}\n{% endraw %}${0}"
     },
     {
       "trigger": "assign\tLiquid assign",
